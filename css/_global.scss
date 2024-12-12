@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: 'Mont';
+    src: url('../fonts/MontRegular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('../fonts/MontSemiBold.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('../fonts/MontBold.ttf');
+    font-weight: 700;
+}
+
+$font-roboto: "Roboto", sans-serif;
+$font-montserrat: "Montserrat", sans-serif;
+$font-roboto-condensed: "Roboto Condensed", sans-serif;
+$font-mont: "Mont", sans-serif;
+
+// Color
+$color-green1: #0D9358;
+$color-light-green: #72C779;
+$color-dark-green: #006B44;
+$color-white-green: #F2F7F2;
+// Color end
+
+@mixin media($value) {
+    @if ($value < 0) {
+        @media screen and (min-width: calc($value * (-1)) + 'px') {
+            @content;
+        }
+
+    } @else {
+        @media screen and (max-width: $value + 'px') {
+            @content;
+        }
+    }
+}
